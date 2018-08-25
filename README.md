@@ -9,11 +9,16 @@ uses the results to build a new next‐hop routing table.
 # How To Run
 Open two terminal windows, call them HostX and HostY  
     where HostX = ubuntu1604-00X and HostY= ubuntu1604-00Y  
-1. run: ./runnse Y  
+1. run:
+> ./runnse Y    
 2. Record the output port of the NSE Emulator (call it Z)  
-3. On the other terminal window, run: ./runRouter X Z  
-4. To kill the router processes, run the following to find their job number: jobs  
-5. Then run: kill %#  where # is the router process you want to kill  
+3. On the other terminal window, run:
+> ./runRouter X Z    
+4. To kill the router processes, run the following to find their job number:
+>  jobs    
+5. Then run:
+> kill %#  
+  where # is the router process you want to kill  
 
 Tested on linux.student.cs.uwaterloo.ca servers using two different machines.  
 g++ was used to compile c++ code and c++14 was used.  
