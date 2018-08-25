@@ -1,0 +1,4 @@
+#!/bin/bash
+chmod +x nse
+portNumber="$(python getFreePort.py)"
+(set -x; ./nse ubuntu1604-00$1 $portNumber)

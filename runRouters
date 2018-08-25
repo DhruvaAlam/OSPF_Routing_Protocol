@@ -1,0 +1,19 @@
+#!/bin/bash
+
+make clean
+make
+chmod +x router
+port1="$(python getFreePort.py)"
+port2="$(python getFreePort.py)"
+port3="$(python getFreePort.py)"
+port4="$(python getFreePort.py)"
+port5="$(python getFreePort.py)"
+./router 1 ubuntu1604-00$1 $2 $port1 &> o1.txt &
+sleep 1
+./router 2 ubuntu1604-00$1 $2 $port2 &> o2.txt &
+sleep 1
+./router 3 ubuntu1604-00$1 $2 $port3 &> o3.txt &
+sleep 1
+./router 4 ubuntu1604-00$1 $2 $port4 &> o4.txt &
+sleep 1
+./router 5 ubuntu1604-00$1 $2 $port5 &> o5.txt &
